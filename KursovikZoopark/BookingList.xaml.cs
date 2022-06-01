@@ -35,8 +35,8 @@ namespace KursovikZoopark
         private void SelectZapis(object sender, MouseButtonEventArgs e)
         {
             Booking SelectBooking = (listEx.SelectedItem as Booking);
-            ClientWin CW = (ClientWin)Window.GetWindow(this);
-            CW.MainFrame.Content = new ZapisEdit(SelectBooking);
+            AdminWin AW = (AdminWin)Window.GetWindow(this);
+            AW.MainFrame.Content = new ZapisEdit(SelectBooking);
         }
     }
 }
