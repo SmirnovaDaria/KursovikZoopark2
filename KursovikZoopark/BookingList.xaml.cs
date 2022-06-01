@@ -26,18 +26,17 @@ namespace KursovikZoopark
         }
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
-            var result = from E in App.Context.Exkursion.ToList()
-                         join B in App.Context.Booking on E.id equals B.idExkursion
-                         join U in App.Context.User on B.idUser equals U.id
-                         select new { U.familia,E.name, B.itog, B.valueMan, B.dateTime };
+            var result = from B in App.Context.Booking.ToList()
+                         where (B.isEnd == false) || (B.isEnd == null)
+                         select B;
             listEx.DataContext = result;
         }
 
         private void SelectZapis(object sender, MouseButtonEventArgs e)
         {
-            Exkursion SelectEx = (listEx.SelectedItem as Exkursion);
+            Booking SelectBooking = (listEx.SelectedItem as Booking);
             ClientWin CW = (ClientWin)Window.GetWindow(this);
-            CW.MainFrame.Content = new ZapisEdit(SelectEx);
+            CW.MainFrame.Content = new ZapisEdit(SelectBooking);
         }
     }
 }
