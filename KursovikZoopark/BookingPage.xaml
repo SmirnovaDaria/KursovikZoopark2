@@ -1,0 +1,65 @@
+﻿<Page x:Class="KursovikZoopark.BookingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KursovikZoopark"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="BookingPage">
+    <Page.Resources>
+        <ControlTemplate TargetType="Button" x:Key="btTemplate">
+            <Border CornerRadius="20"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Background="{TemplateBinding Background}"
+                    Height="{TemplateBinding Height}"
+                    Width="{TemplateBinding Width}" >
+                <ContentControl Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Content}" />
+            </Border>
+        </ControlTemplate>
+    </Page.Resources>
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Название" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="48" Width="158"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <DatePicker x:Name="dataPicker" Margin="10,0,10,0"  Width="150" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
+            <ComboBox x:Name="HourComboBox" Margin="10" Width="100" />
+            <ComboBox x:Name="MinutComboBox"  Margin="10" Width="100" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <ComboBox x:Name="ValueManComboBox" Width=" 100" Margin="10,0,10,0" SelectionChanged="ValueManComboBox_SelectionChanged" />
+            <TextBlock Text="Итого:" Width="72" FontSize="20" VerticalAlignment="Center" Margin="300,0,0,0" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.593"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBlock x:Name="ItogTextBlock" HorizontalAlignment="Center" Text="2000" Width="100" FontSize="20" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Button Template="{StaticResource btTemplate}" Grid.Row="4" Width="300" Height="45" Content="Бронировать" FontSize="25" BorderThickness="1,1,0,1" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" FontWeight="Bold" Foreground="Black" BorderBrush="#00000000" Click="BookingEx">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFBDFF69" Offset="0.3"/>
+                    <GradientStop Color="#FF8CC248" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            
+        </Button>
+
+    </Grid>
+</Page>
