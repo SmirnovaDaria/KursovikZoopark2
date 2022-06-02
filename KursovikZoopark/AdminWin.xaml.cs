@@ -41,5 +41,10 @@ namespace KursovikZoopark
             this.Close();
             MW.Show();
         }
+
+        private void EditEx(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new EditExkursion();
+        }
     }
 }

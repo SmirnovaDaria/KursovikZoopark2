@@ -103,6 +103,12 @@
     <Compile Include="ClientWin.xaml.cs">
       <DependentUpon>ClientWin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditEx.xaml.cs">
+      <DependentUpon>EditEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditExkursion.xaml.cs">
+      <DependentUpon>EditExkursion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Exkursion.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -165,6 +171,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ClientWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditExkursion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
