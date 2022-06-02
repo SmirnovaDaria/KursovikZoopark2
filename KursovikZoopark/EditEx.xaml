@@ -3,12 +3,26 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:KursovikZoopark"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1000"
       Title="EditEx">
 
     <Grid Background="White">
-        
+        <Canvas>
+            <StackPanel HorizontalAlignment="Left" Width="800">
+                <TextBox x:Name="nameEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Название" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="infoEx" HorizontalAlignment="Left" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Описание" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="priceEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Цена" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+            </StackPanel>
+            <StackPanel Canvas.Left="443">
+                <TextBox x:Name="durationEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Длительность (мин)" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="maxManEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Макс. кол-во человек" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="skidkaEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Скидка" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+            </StackPanel>
+            <Button x:Name="EditBtn" Width="200" FontSize="20" Content="Редактировать" Click="StartEdit" Canvas.Left="406" Canvas.Top="324"/>
+            <Button x:Name="SaveBtn" Visibility="Hidden" Width="200" FontSize="20" Content="Сохранить" Click="SaveBtn_Click" Canvas.Left="406" Canvas.Top="324"/>
+        </Canvas>
     </Grid>
 </Page>

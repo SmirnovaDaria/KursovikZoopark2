@@ -14,11 +14,11 @@
             <TextBox x:Name="loginBox" Width="300" FontSize="20" Canvas.Left="44" materialDesign:HintAssist.Hint="Придумайте логин" Canvas.Top="10" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
             <PasswordBox x:Name="PassBox" Width="300" FontSize="20" Canvas.Left="43" Canvas.Top="92" materialDesign:HintAssist.Hint="Придумайте пароль" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
             <Button Width="Auto" Height="30" Canvas.Left="288" Canvas.Top="371" Content="Зарегестрировться" Click="Registrat" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
-            <Button Width="Auto" Height="30" Canvas.Left="318" Canvas.Top="410" Content="Назад" Click="Nazad" Style="{StaticResource MaterialDesignFlatButton}"/>
+            <Button Width="Auto" Height="30" Canvas.Left="706" Canvas.Top="371" Content="Назад" Click="Nazad" Style="{StaticResource MaterialDesignFlatButton}"/>
             <TextBox x:Name="NameBox" Width="300" FontSize="20" Canvas.Left="44" materialDesign:HintAssist.Hint="Имя" Canvas.Top="179" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
             <TextBox x:Name="FamiliaBox" Width="300" FontSize="20" Canvas.Left="44" materialDesign:HintAssist.Hint="Имя" Canvas.Top="260" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
             <DatePicker  Width="416" Height="100" FontSize="30" materialDesign:HintAssist.Hint="Дата рождения" Canvas.Left="361" Canvas.Top="166"/>
-            
+
         </Canvas>
     </Grid>
 </Page>

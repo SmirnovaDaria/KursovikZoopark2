@@ -23,6 +23,7 @@ namespace KursovikZoopark
         {
             InitializeComponent();
             MainFrame.Content = new BookingList();
+            this.WindowState = WindowState.Maximized;
         }
 
         private void NavBookingPageAdmin(object sender, RoutedEventArgs e)

@@ -20,9 +20,50 @@ namespace KursovikZoopark
     /// </summary>
     public partial class EditEx : Page
     {
-        public EditEx(Exkursion Ex)
+        Exkursion Ex = new Exkursion();
+        public EditEx(Exkursion _Ex)
         {
             InitializeComponent();
+            Ex = _Ex;
+            nameEx.Text = Ex.name;
+            infoEx.Text = Ex.info;
+            priceEx.Text = Ex.price.ToString();
+            durationEx.Text = Ex.duration.ToString();
+            maxManEx.Text = Ex.maxMan.ToString();
+            skidkaEx.Text = Ex.skidka.ToString();
+            IsRead(true);
+        }
+
+        public void IsRead(bool isR)
+        {
+            nameEx.IsReadOnly = isR;
+            infoEx.IsReadOnly = isR;
+            priceEx.IsReadOnly = isR;
+            durationEx.IsReadOnly = isR;
+            maxManEx.IsReadOnly = isR;
+            skidkaEx.IsReadOnly = isR;
+        }
+
+        private void StartEdit(object sender, RoutedEventArgs e)
+        {
+            IsRead(false);
+            EditBtn.Visibility = Visibility.Hidden;
+            SaveBtn.Visibility = Visibility.Visible;
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            IsRead(true);
+            EditBtn.Visibility = Visibility.Visible;
+            SaveBtn.Visibility = Visibility.Hidden;
+
+            Ex.name = nameEx.Text;
+            Ex.info = infoEx.Text;
+            Ex.duration = int.Parse(durationEx.Text);
+            Ex.maxMan = int.Parse(maxManEx.Text);
+            Ex.price = int.Parse(priceEx.Text);
+            Ex.skidka = int.Parse(skidkaEx.Text);
+            App.Context.SaveChanges();
         }
     }
 }

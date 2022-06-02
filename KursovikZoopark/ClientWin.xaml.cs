@@ -24,6 +24,7 @@ namespace KursovikZoopark
         {
             InitializeComponent();
             _client = client;
+            this.WindowState = WindowState.Maximized;
             MainFrame.Content = new ListExkursion(_client);
         }
         private void NavListExkursion(object sender, RoutedEventArgs e)
