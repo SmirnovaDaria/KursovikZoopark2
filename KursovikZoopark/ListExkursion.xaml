@@ -14,7 +14,7 @@
                 <DataGridTextColumn Header="Название" Binding="{Binding name}" Width="100"/>
                 <DataGridTextColumn Header="Цена"  Binding="{Binding price}" Width="100"/>
                 <DataGridTextColumn Header="Длительность"  Binding="{Binding duration}" Width="100"/>
-                <DataGridTextColumn Header="Максю.чел."  Binding="{Binding maxMan}" Width="100"/>
+                <DataGridTextColumn Header="Макс.чел."  Binding="{Binding maxMan}" Width="130"/>
                 <DataGridTextColumn Header="Like"  Binding="{Binding isLike}" Width="100"/>
             </DataGrid.Columns>
         </DataGrid>
