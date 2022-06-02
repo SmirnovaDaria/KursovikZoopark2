@@ -57,6 +57,7 @@ namespace KursovikZoopark
             date = new DateTime(dataPicker.SelectedDate.Value.Year, dataPicker.SelectedDate.Value.Month, dataPicker.SelectedDate.Value.Day, _hour, _minut,0);
             booking.dateTime = date;
             booking.itog = itog;
+            booking.isEnd = false;
             App.Context.Booking.Add(booking);
             App.Context.SaveChanges();
             MessageBox.Show("Бронирование прошло успешно");

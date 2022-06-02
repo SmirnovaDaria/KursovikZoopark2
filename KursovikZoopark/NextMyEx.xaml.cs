@@ -16,30 +16,30 @@ using System.Windows.Shapes;
 namespace KursovikZoopark
 {
     /// <summary>
-    /// Логика взаимодействия для MyHistory.xaml
+    /// Логика взаимодействия для NextMyEx.xaml
     /// </summary>
-    public partial class MyHistory : Page
+    public partial class NextMyEx : Page
     {
         User _client;
-        public MyHistory(User client)
+        public NextMyEx(User _client)
         {
             InitializeComponent();
-            _client = client;
+            this._client = _client;
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             var result = (from E in App.Context.Exkursion.ToList()
-                         join B in App.Context.Booking on E.id equals B.idExkursion
-                         //join U in App.Context.User on B.idUser equals U.id
-                         where (B.idUser == _client.id) && (B.isEnd ==true)
-                         select new {B.id,E.name,B.itog,B.valueMan, B.dateTime}).OrderBy(x=>x.id);
+                          join B in App.Context.Booking on E.id equals B.idExkursion
+                          //join U in App.Context.User on B.idUser equals U.id
+                          where (B.idUser == _client.id) && (B.isEnd == false)
+                          select new { B.id, E.name, B.itog, B.valueMan, B.dateTime }).OrderBy(x => x.id);
             listEx.DataContext = result;
         }
 
         private void SelectEx(object sender, MouseButtonEventArgs e)
         {
-            
+
         }
 
         private void listEx_SelectionChanged(object sender, SelectionChangedEventArgs e)
