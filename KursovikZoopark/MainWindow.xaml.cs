@@ -23,33 +23,7 @@ namespace KursovikZoopark
         public MainWindow()
         {
             InitializeComponent();
-            
-        }
-
-        private void Whod(object sender, RoutedEventArgs e)
-        {
-            foreach (var item in App.Context.User.ToList())
-            {
-                if (loginBox.Text == item.login)
-                {
-                    if (PassBox.Password==item.password)
-                    {
-                        if (item.role==1)
-                        {
-                            ClientWin CW = new ClientWin(item);
-                            this.Close();
-                            CW.Show();
-                        }
-                        else if(item.role == 2)
-                        {
-                            AdminWin AW = new AdminWin();
-                            this.Close();
-                            AW.Show();
-                        }
-                        break;
-                    }
-                }
-            }
+            MainFrame.Content = new Whod.Autorization();
         }
     }
 }
