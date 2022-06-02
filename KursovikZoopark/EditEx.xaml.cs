@@ -25,6 +25,12 @@ namespace KursovikZoopark
         {
             InitializeComponent();
             Ex = _Ex;
+            if (_Ex == null)
+            {
+                EditBtn.Visibility = Visibility.Hidden;
+                SaveBtn.Visibility = Visibility.Visible;
+                return;
+            }
             nameEx.Text = Ex.name;
             infoEx.Text = Ex.info;
             priceEx.Text = Ex.price.ToString();
@@ -56,13 +62,22 @@ namespace KursovikZoopark
             IsRead(true);
             EditBtn.Visibility = Visibility.Visible;
             SaveBtn.Visibility = Visibility.Hidden;
-
+            bool isUpdate = true;
+            if (Ex==null)
+            {
+                Ex = new Exkursion();
+                isUpdate = false;
+            }
             Ex.name = nameEx.Text;
             Ex.info = infoEx.Text;
             Ex.duration = int.Parse(durationEx.Text);
             Ex.maxMan = int.Parse(maxManEx.Text);
             Ex.price = int.Parse(priceEx.Text);
             Ex.skidka = int.Parse(skidkaEx.Text);
+            if (isUpdate == false)
+            {
+                App.Context.Exkursion.Add(Ex);
+            }
             App.Context.SaveChanges();
         }
     }
