@@ -11,13 +11,12 @@
 
     <Grid Background="White">
         <Canvas Margin="0,5,-0.4,-5">
-            <TextBox x:Name="loginBox" Width="300" FontSize="20" Canvas.Left="44" materialDesign:HintAssist.Hint="Придумайте логин" Canvas.Top="10" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
-            <PasswordBox x:Name="PassBox" Width="300" FontSize="20" Canvas.Left="43" Canvas.Top="92" materialDesign:HintAssist.Hint="Придумайте пароль" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
-            <Button Width="Auto" Height="30" Canvas.Left="288" Canvas.Top="371" Content="Зарегестрировться" Click="Registrat" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
-            <Button Width="Auto" Height="30" Canvas.Left="706" Canvas.Top="371" Content="Назад" Click="Nazad" Style="{StaticResource MaterialDesignFlatButton}"/>
-            <TextBox x:Name="NameBox" Width="300" FontSize="20" Canvas.Left="44" materialDesign:HintAssist.Hint="Имя" Canvas.Top="179" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
-            <TextBox x:Name="FamiliaBox" Width="300" FontSize="20" Canvas.Left="44" materialDesign:HintAssist.Hint="Имя" Canvas.Top="260" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
-            <DatePicker  Width="416" Height="100" FontSize="30" materialDesign:HintAssist.Hint="Дата рождения" Canvas.Left="361" Canvas.Top="166"/>
+            <TextBox x:Name="loginBox" Width="300" FontSize="13" Canvas.Left="251" materialDesign:HintAssist.Hint="Придумайте логин" Canvas.Top="55" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+            <PasswordBox x:Name="PassBox" Width="300" FontSize="13" Canvas.Left="251" Canvas.Top="125" materialDesign:HintAssist.Hint="Придумайте пароль" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+            <Button Width="220" Height="50" Background="#8CC248" Foreground="White" FontWeight="Bold" FontSize="20" Canvas.Left="290" Canvas.Top="345" Content="Зарегестрировться" Click="Registrat" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
+            <Button Width="Auto" Foreground="#8CC248" FontSize="15" Height="30" Canvas.Left="10" Canvas.Top="10" Content="Назад" Click="Nazad" Style="{StaticResource MaterialDesignFlatButton}"/>
+            <TextBox x:Name="NameBox" Width="300" FontSize="13" Canvas.Left="251" materialDesign:HintAssist.Hint="Имя" Canvas.Top="194" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+            <TextBox x:Name="FamiliaBox" Width="300" FontSize="13" Canvas.Left="251" materialDesign:HintAssist.Hint="Фамилия" Canvas.Top="263" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
 
         </Canvas>
     </Grid>

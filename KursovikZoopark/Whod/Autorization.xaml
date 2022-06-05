@@ -11,10 +11,11 @@
 
     <Grid Background="White">
         <Canvas Margin="0,5,-0.4,-5">
-            <TextBox x:Name="loginBox" Width="300" FontSize="20" Canvas.Left="226" materialDesign:HintAssist.Hint="Логин" Canvas.Top="75" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
-            <PasswordBox x:Name="PassBox" Width="300" FontSize="20" Canvas.Left="226" Canvas.Top="159" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
-            <Button Width="100" Height="30" Canvas.Left="325" Canvas.Top="243" Content="Войти" Click="Whod" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
-            <Button Width="Auto" Height="30" Canvas.Left="311" Canvas.Top="304" Content="Регистрация" Click="Regisrtation" Style="{StaticResource MaterialDesignFlatButton}"/>
+            <TextBlock FontSize="25" Canvas.Left="10" Canvas.Top="46" Width="780" TextAlignment="Center" FontWeight="Bold" Foreground="#8CC248">Авторизация</TextBlock>
+            <TextBox x:Name="loginBox" Width="300" FontSize="13" Canvas.Left="250" materialDesign:HintAssist.Hint="Логин" Canvas.Top="134" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+            <PasswordBox x:Name="PassBox" Width="300" FontSize="13" Canvas.Left="250" Canvas.Top="199" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignOutlinedPasswordBox}"/>
+            <Button Width="200" Height="50" Canvas.Left="300" Canvas.Top="298" Content="Войти" Background="#8CC248" FontSize="20" FontWeight="Bold" Foreground="White" Click="Whod" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
+            <Button Width="200" Height="33" Canvas.Left="300" Canvas.Top="354" Content="Регистрация" Foreground="#8CC248" FontSize="15" Click="Regisrtation" Style="{StaticResource MaterialDesignFlatButton}"/>
         </Canvas>
     </Grid>
 </Page>

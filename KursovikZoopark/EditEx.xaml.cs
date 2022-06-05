@@ -80,5 +80,10 @@ namespace KursovikZoopark
             }
             App.Context.SaveChanges();
         }
+
+        private void skidkaEx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

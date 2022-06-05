@@ -11,18 +11,18 @@
 
     <Grid Background="White">
         <Canvas>
-            <StackPanel HorizontalAlignment="Left" Width="800">
-                <TextBox x:Name="nameEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Название" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
-                <TextBox x:Name="infoEx" HorizontalAlignment="Left" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Описание" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
-                <TextBox x:Name="priceEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Цена" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+            <StackPanel HorizontalAlignment="Left" Width="800" Canvas.Left="83" Canvas.Top="33">
+                <TextBox x:Name="nameEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Название" Width="300" FontSize="13" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="infoEx" HorizontalAlignment="Left" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Описание" Width="300" FontSize="13" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="priceEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Цена" Width="300" FontSize="13" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
             </StackPanel>
-            <StackPanel Canvas.Left="443">
-                <TextBox x:Name="durationEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Длительность (мин)" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
-                <TextBox x:Name="maxManEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Макс. кол-во человек" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
-                <TextBox x:Name="skidkaEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Скидка" Width="300" FontSize="20" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+            <StackPanel Canvas.Left="580" Canvas.Top="33">
+                <TextBox x:Name="durationEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Длительность (мин)" Width="300" FontSize="13" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="maxManEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Макс. кол-во человек" Width="300" FontSize="13" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20"/>
+                <TextBox x:Name="skidkaEx" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Скидка" Width="300" FontSize="13" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="20,20,20,20" TextChanged="skidkaEx_TextChanged"/>
             </StackPanel>
-            <Button x:Name="EditBtn" Width="200" FontSize="20" Content="Редактировать" Click="StartEdit" Canvas.Left="406" Canvas.Top="324"/>
-            <Button x:Name="SaveBtn" Visibility="Hidden" Width="200" FontSize="20" Content="Сохранить" Click="SaveBtn_Click" Canvas.Left="406" Canvas.Top="324"/>
+            <Button x:Name="EditBtn" Width="200" Height="50" Background="#8CC248" Foreground="White" FontWeight="Bold" FontSize="20" Content="Редактировать" Click="StartEdit" Canvas.Left="406" Canvas.Top="356" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
+            <Button x:Name="SaveBtn" Visibility="Hidden" Width="200" Height="50" Background="#8CC248" Foreground="White" FontWeight="Bold" FontSize="20" Content="Сохранить" Click="SaveBtn_Click" Canvas.Left="406" Canvas.Top="356" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}"/>
         </Canvas>
     </Grid>
 </Page>

@@ -15,8 +15,6 @@
             <Button Background="#8CC248" Content="Экскурсии" Height="40" Margin="0,75,0,0" Click="NavListExkursion"/>
             <Button Background="#8CC248" Content="История" Height="40" Margin="0,15,0,0" Click="NavHistory"/>
             <Button Background="#8CC248" Content="Предстоящие экскурсии" Height="40" Margin="0,15,0,0" Click="NextExkursion"/>
-            <Button Background="#8CC248" Content="Избранное" Height="40" Margin="0,15,0,0"/>
-            <Button Background="#8CC248" Content="О нас" Height="40" Margin="0,15,0,0"/>
             <Button Background="#8CC248" Content="Выйти из аккаунта" Height="40" Margin="0,35,0,0" Click="Exit"/>
         </StackPanel>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>

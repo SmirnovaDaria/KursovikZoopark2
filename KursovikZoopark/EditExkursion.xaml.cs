@@ -24,18 +24,18 @@ namespace KursovikZoopark
         {
             InitializeComponent();
         }
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-            var result = from E in App.Context.Exkursion.ToList()
-                         select E;
-            listEx.DataContext = result;
-        }
+            private void Grid_Loaded(object sender, RoutedEventArgs e)
+            {
+                var result = from E in App.Context.Exkursion.ToList()
+                             select E;
+                listEx.DataContext = result;
+            }
 
-        private void SelectEx(object sender, MouseButtonEventArgs e)
-        {
-            Exkursion SelectEx = (listEx.SelectedItem as Exkursion);
-            AdminWin CW = (AdminWin)Window.GetWindow(this);
-            CW.MainFrame.Content = new EditEx(SelectEx);
-        }
+            private void SelectEx(object sender, MouseButtonEventArgs e)
+            {
+                Exkursion SelectEx = (listEx.SelectedItem as Exkursion);
+                AdminWin CW = (AdminWin)Window.GetWindow(this);
+                CW.MainFrame.Content = new EditEx(SelectEx);
+            }
     }
 }
