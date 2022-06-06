@@ -31,7 +31,6 @@ namespace KursovikZoopark
         {
             var result = (from E in App.Context.Exkursion.ToList()
                          join B in App.Context.Booking on E.id equals B.idExkursion
-                         //join U in App.Context.User on B.idUser equals U.id
                          where (B.idUser == _client.id) && (B.isEnd ==true)
                          select new {B.id,E.name,B.itog,B.valueMan, B.dateTime}).OrderBy(x=>x.id);
             listEx.DataContext = result;
