@@ -19,7 +19,7 @@
             <RowDefinition Height="67*"/>
             <RowDefinition Height="90*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Название" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="48" Width="158"/>
+        <TextBlock x:Name="nameEx" Text="Название" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Height="48" Width="158"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <DatePicker x:Name="dataPicker" materialDesign:HintAssist.Hint="Дата посещения" Margin="10,0,10,0"  Width="150" HorizontalAlignment="Center" FontSize="16" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
             <ComboBox x:Name="HourComboBox" materialDesign:HintAssist.Hint="Часы"  Margin="10" Width="100" />
@@ -37,7 +37,7 @@
                     </TransformGroup>
                 </TextBlock.RenderTransform>
             </TextBlock>
-            <TextBlock x:Name="ItogTextBlock" HorizontalAlignment="Center" Text="2000" Width="100" FontSize="20" VerticalAlignment="Center"/>
+            <TextBlock x:Name="ItogTextBlock" HorizontalAlignment="Center" Text="0" Width="100" FontSize="20" VerticalAlignment="Center"/>
         </StackPanel>
         <Button Grid.Row="4" Width="200" Background="#8CC248" Height="50" Content="Бронировать" FontSize="20" Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}" BorderThickness="1,1,0,1" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="2" FontWeight="Bold" Foreground="White" BorderBrush="#00000000" Click="BookingEx">
         </Button>

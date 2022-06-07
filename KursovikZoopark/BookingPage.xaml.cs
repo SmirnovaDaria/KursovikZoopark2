@@ -29,6 +29,7 @@ namespace KursovikZoopark
             InitializeComponent();
             _client = client;
             selectEx = Ex;
+            nameEx.Text = selectEx.name;
             dataPicker.DisplayDateStart = DateTime.Now;
             for (int i = 1; i < Ex.maxMan + 1; i++)
             {
